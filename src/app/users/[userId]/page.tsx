@@ -1,6 +1,7 @@
 import { getUser } from "../../data-access/user";
 import Form from "./form";
 
+
 export default async function userPage ({ params ,} : {
     params: {
         userId: string;
