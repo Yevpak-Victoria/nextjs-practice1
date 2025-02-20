@@ -1,7 +1,8 @@
 'use client'
 
 import {updateNameAction} from "./actions";
-import { useFormState } from "react-dom";
+import { useFormState} from "react-dom";
+import { SubmitButton } from "./button";
 
 export default function Form ({ userId } : {userId:string}){
     const [state, action] = useFormState(updateNameAction, {
@@ -17,9 +18,8 @@ export default function Form ({ userId } : {userId:string}){
                         className="text-black border border-gray-400"
                         type="text" name="name"/>
 
-                    <button
-                        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4"
-                    >Submit</button>
+                    <SubmitButton />
                 </form>
     );
 }
+
